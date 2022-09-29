@@ -1,0 +1,3 @@
+~/Documents/technical/Programming/Sastre-Pro/venv/bin/activate
+~/Documents/technical/Programming/Sastre-Pro/sdwan.py -a 192.168.1.81 -u admin -p 10-9=One --pid none --verbose delete template_feature --regex FIS
+~/Documents/technical/Programming/Sastre-Pro/sdwan.py -a 192.168.1.81 -u admin -p 10-9=One --pid none --verbose delete template_device --regex FIS

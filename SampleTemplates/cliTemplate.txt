@@ -1,0 +1,1372 @@
+system
+ system-ip             {{system_ip}}
+ overlay-id            1
+ site-id               {{site_id}}
+ no transport-gateway enable
+ port-offset           0
+ control-session-pps   300
+ admin-tech-on-failure
+ sp-organization-name  atlnrlab
+ organization-name     atlnrlab
+ port-hop
+ track-transport
+ track-default-gateway
+ console-baud-rate     9600
+ no on-demand enable
+ on-demand idle-timeout 10
+ vbond 192.168.1.84 port 12346
+!
+banner login \x03Un authorised Logins tracked\x03
+banner motd \x03Restricted Use\x03
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service tcp-keepalives-in
+service tcp-keepalives-out
+no service tcp-small-servers
+no service udp-small-servers
+hostname {{hostname}}
+username admin privilege 15 secret 9 $9$3V6L3V6L2VUI2k$ysPnXOdg8RLj9KgMdmfHdSHkdaMmiHzGaUpcqH6pfTo
+vrf definition 150
+ description VPN 150
+ rd          1:150
+ address-family ipv4
+  route-target export 1:150
+  route-target import 1:150
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 151
+ description VPN 151
+ rd          1:151
+ address-family ipv4
+  route-target export 1:151
+  route-target import 1:151
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 152
+ description VPN 152
+ rd          1:152
+ address-family ipv4
+  route-target export 1:152
+  route-target import 1:152
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 153
+ description VPN 153
+ rd          1:153
+ address-family ipv4
+  route-target export 1:153
+  route-target import 1:153
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 154
+ description VPN 154
+ rd          1:154
+ address-family ipv4
+  route-target export 1:154
+  route-target import 1:154
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 155
+ description VPN 155
+ rd          1:155
+ address-family ipv4
+  route-target export 1:155
+  route-target import 1:155
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 156
+ description VPN 156
+ rd          1:156
+ address-family ipv4
+  route-target export 1:156
+  route-target import 1:156
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 157
+ description VPN 157
+ rd          1:157
+ address-family ipv4
+  route-target export 1:157
+  route-target import 1:157
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 158
+ description VPN 158
+ rd          1:158
+ address-family ipv4
+  route-target export 1:158
+  route-target import 1:158
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 159
+ description VPN 159
+ rd          1:159
+ address-family ipv4
+  route-target export 1:159
+  route-target import 1:159
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 160
+ description VPN 160
+ rd          1:160
+ address-family ipv4
+  route-target export 1:160
+  route-target import 1:160
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 161
+ description VPN 161
+ rd          1:161
+ address-family ipv4
+  route-target export 1:161
+  route-target import 1:161
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 162
+ description VPN 162
+ rd          1:162
+ address-family ipv4
+  route-target export 1:162
+  route-target import 1:162
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 163
+ description VPN 163
+ rd          1:163
+ address-family ipv4
+  route-target export 1:163
+  route-target import 1:163
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 164
+ description VPN 164
+ rd          1:164
+ address-family ipv4
+  route-target export 1:164
+  route-target import 1:164
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 165
+ description VPN 165
+ rd          1:165
+ address-family ipv4
+  route-target export 1:165
+  route-target import 1:165
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 166
+ description VPN 166
+ rd          1:166
+ address-family ipv4
+  route-target export 1:166
+  route-target import 1:166
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 167
+ description VPN 167
+ rd          1:167
+ address-family ipv4
+  route-target export 1:167
+  route-target import 1:167
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 168
+ description VPN 168
+ rd          1:168
+ address-family ipv4
+  route-target export 1:168
+  route-target import 1:168
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 169
+ description VPN 169
+ rd          1:169
+ address-family ipv4
+  route-target export 1:169
+  route-target import 1:169
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 170
+ description VPN 170
+ rd          1:170
+ address-family ipv4
+  route-target export 1:170
+  route-target import 1:170
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 171
+ description VPN 171
+ rd          1:171
+ address-family ipv4
+  route-target export 1:171
+  route-target import 1:171
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 172
+ description VPN 172
+ rd          1:172
+ address-family ipv4
+  route-target export 1:172
+  route-target import 1:172
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 173
+ description VPN 173
+ rd          1:173
+ address-family ipv4
+  route-target export 1:173
+  route-target import 1:173
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 174
+ description VPN 174
+ rd          1:174
+ address-family ipv4
+  route-target export 1:174
+  route-target import 1:174
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 175
+ description VPN 175
+ rd          1:175
+ address-family ipv4
+  route-target export 1:175
+  route-target import 1:175
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 176
+ description VPN 176
+ rd          1:176
+ address-family ipv4
+  route-target export 1:176
+  route-target import 1:176
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 177
+ description VPN 177
+ rd          1:177
+ address-family ipv4
+  route-target export 1:177
+  route-target import 1:177
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 178
+ description VPN 178
+ rd          1:178
+ address-family ipv4
+  route-target export 1:178
+  route-target import 1:178
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 179
+ description VPN 179
+ rd          1:179
+ address-family ipv4
+  route-target export 1:179
+  route-target import 1:179
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 180
+ description VPN 180
+ rd          1:180
+ address-family ipv4
+  route-target export 1:180
+  route-target import 1:180
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 181
+ description VPN 181
+ rd          1:181
+ address-family ipv4
+  route-target export 1:181
+  route-target import 1:181
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 182
+ description VPN 182
+ rd          1:182
+ address-family ipv4
+  route-target export 1:182
+  route-target import 1:182
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 183
+ description VPN 183
+ rd          1:183
+ address-family ipv4
+  route-target export 1:183
+  route-target import 1:183
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 184
+ description VPN 184
+ rd          1:184
+ address-family ipv4
+  route-target export 1:184
+  route-target import 1:184
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 185
+ description VPN 185
+ rd          1:185
+ address-family ipv4
+  route-target export 1:185
+  route-target import 1:185
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 186
+ description VPN 186
+ rd          1:186
+ address-family ipv4
+  route-target export 1:186
+  route-target import 1:186
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 187
+ description VPN 187
+ rd          1:187
+ address-family ipv4
+  route-target export 1:187
+  route-target import 1:187
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 188
+ description VPN 188
+ rd          1:188
+ address-family ipv4
+  route-target export 1:188
+  route-target import 1:188
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 189
+ description VPN 189
+ rd          1:189
+ address-family ipv4
+  route-target export 1:189
+  route-target import 1:189
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 190
+ description VPN 190
+ rd          1:190
+ address-family ipv4
+  route-target export 1:190
+  route-target import 1:190
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 191
+ description VPN 191
+ rd          1:191
+ address-family ipv4
+  route-target export 1:191
+  route-target import 1:191
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 192
+ description VPN 192
+ rd          1:192
+ address-family ipv4
+  route-target export 1:192
+  route-target import 1:192
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 193
+ description VPN 193
+ rd          1:193
+ address-family ipv4
+  route-target export 1:193
+  route-target import 1:193
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 194
+ description VPN 194
+ rd          1:194
+ address-family ipv4
+  route-target export 1:194
+  route-target import 1:194
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 195
+ description VPN 195
+ rd          1:195
+ address-family ipv4
+  route-target export 1:195
+  route-target import 1:195
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 196
+ description VPN 196
+ rd          1:196
+ address-family ipv4
+  route-target export 1:196
+  route-target import 1:196
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 197
+ description VPN 197
+ rd          1:197
+ address-family ipv4
+  route-target export 1:197
+  route-target import 1:197
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 198
+ description VPN 198
+ rd          1:198
+ address-family ipv4
+  route-target export 1:198
+  route-target import 1:198
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition 199
+ description VPN 199
+ rd          1:199
+ address-family ipv4
+  route-target export 1:199
+  route-target import 1:199
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+vrf definition Mgmt-intf
+ description Management VPN
+ rd          1:512
+ address-family ipv4
+  route-target export 1:512
+  route-target import 1:512
+  exit-address-family
+ !
+ address-family ipv6
+  exit-address-family
+ !
+!
+ip arp proxy disable
+no ip finger
+no ip rcmd rcp-enable
+no ip rcmd rsh-enable
+no ip dhcp use class
+ip host home-wired-tbpnrzvpcg.dynamic-m.com 192.168.1.84
+ip name-server 8.8.8.8
+ip name-server vrf 150 1.1.1.1 8.8.8.8
+ip name-server vrf 151 1.1.1.1 8.8.8.8
+ip name-server vrf 152 1.1.1.1 8.8.8.8
+ip name-server vrf 153 1.1.1.1 8.8.8.8
+ip name-server vrf 154 1.1.1.1 8.8.8.8
+ip name-server vrf 155 1.1.1.1 8.8.8.8
+ip name-server vrf 156 1.1.1.1 8.8.8.8
+ip name-server vrf 157 1.1.1.1 8.8.8.8
+ip name-server vrf 158 1.1.1.1 8.8.8.8
+ip name-server vrf 159 1.1.1.1 8.8.8.8
+ip name-server vrf 160 1.1.1.1 8.8.8.8
+ip name-server vrf 161 1.1.1.1 8.8.8.8
+ip name-server vrf 162 1.1.1.1 8.8.8.8
+ip name-server vrf 163 1.1.1.1 8.8.8.8
+ip name-server vrf 164 1.1.1.1 8.8.8.8
+ip name-server vrf 165 1.1.1.1 8.8.8.8
+ip name-server vrf 166 1.1.1.1 8.8.8.8
+ip name-server vrf 167 1.1.1.1 8.8.8.8
+ip name-server vrf 168 1.1.1.1 8.8.8.8
+ip name-server vrf 169 1.1.1.1 8.8.8.8
+ip name-server vrf 170 1.1.1.1 8.8.8.8
+ip name-server vrf 171 1.1.1.1 8.8.8.8
+ip name-server vrf 172 1.1.1.1 8.8.8.8
+ip name-server vrf 173 1.1.1.1 8.8.8.8
+ip name-server vrf 174 1.1.1.1 8.8.8.8
+ip name-server vrf 175 1.1.1.1 8.8.8.8
+ip name-server vrf 176 1.1.1.1 8.8.8.8
+ip name-server vrf 177 1.1.1.1 8.8.8.8
+ip name-server vrf 178 1.1.1.1 8.8.8.8
+ip name-server vrf 179 1.1.1.1 8.8.8.8
+ip name-server vrf 180 1.1.1.1 8.8.8.8
+ip name-server vrf 181 1.1.1.1 8.8.8.8
+ip name-server vrf 182 1.1.1.1 8.8.8.8
+ip name-server vrf 183 1.1.1.1 8.8.8.8
+ip name-server vrf 184 1.1.1.1 8.8.8.8
+ip name-server vrf 185 1.1.1.1 8.8.8.8
+ip name-server vrf 186 1.1.1.1 8.8.8.8
+ip name-server vrf 187 1.1.1.1 8.8.8.8
+ip name-server vrf 188 1.1.1.1 8.8.8.8
+ip name-server vrf 189 1.1.1.1 8.8.8.8
+ip name-server vrf 190 1.1.1.1 8.8.8.8
+ip name-server vrf 191 1.1.1.1 8.8.8.8
+ip name-server vrf 192 1.1.1.1 8.8.8.8
+ip name-server vrf 193 1.1.1.1 8.8.8.8
+ip name-server vrf 194 1.1.1.1 8.8.8.8
+ip name-server vrf 195 1.1.1.1 8.8.8.8
+ip name-server vrf 196 1.1.1.1 8.8.8.8
+ip name-server vrf 197 1.1.1.1 8.8.8.8
+ip name-server vrf 198 1.1.1.1 8.8.8.8
+ip name-server vrf 199 1.1.1.1 8.8.8.8
+ip name-server vrf Mgmt-intf 8.8.8.8
+ip bootp server
+no ip source-route
+no ip http server
+no ip http secure-server
+ip nat settings central-policy
+ipv6 unicast-routing
+ipv6 rip vrf-mode enable
+cdp run
+interface GigabitEthernet1
+ description   Management Interface
+ no shutdown
+ arp timeout 1200
+ vrf forwarding Mgmt-intf
+ ip address dhcp client-id GigabitEthernet1
+ no ip redirects
+ ip dhcp client default-router distance 1
+ ip mtu    1500
+ load-interval 30
+ mtu           1500
+ negotiation auto
+exit
+interface GigabitEthernet2
+ description   Internet
+ no shutdown
+ arp timeout 1200
+ ip address dhcp client-id GigabitEthernet2
+ no ip redirects
+ ip dhcp client default-router distance 1
+ ip mtu    1500
+ load-interval 30
+ mtu           1500
+ negotiation auto
+exit
+interface GigabitEthernet3
+ no shutdown
+ arp timeout 1200
+ no ip redirects
+ ip mtu    1500
+ load-interval 30
+ mtu           1500
+ negotiation auto
+exit
+interface GigabitEthernet3.150
+ description VPN 150
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 150
+ vrf forwarding 150
+ ip address 10.0.160.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.151
+ description VPN 151
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 151
+ vrf forwarding 151
+ ip address 10.0.161.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.152
+ description VPN 152
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 152
+ vrf forwarding 152
+ ip address 10.0.162.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.153
+ description VPN 153
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 153
+ vrf forwarding 153
+ ip address 10.0.163.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.154
+ description VPN 154
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 154
+ vrf forwarding 154
+ ip address 10.0.164.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.155
+ description VPN 155
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 155
+ vrf forwarding 155
+ ip address 10.0.165.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.156
+ description VPN 156
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 156
+ vrf forwarding 156
+ ip address 10.0.166.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.157
+ description VPN 157
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 157
+ vrf forwarding 157
+ ip address 10.0.167.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.158
+ description VPN 158
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 158
+ vrf forwarding 158
+ ip address 10.0.168.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.159
+ description VPN 159
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 159
+ vrf forwarding 159
+ ip address 10.0.169.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.160
+ description VPN 160
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 160
+ vrf forwarding 160
+ ip address 10.0.170.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.161
+ description VPN 161
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 161
+ vrf forwarding 161
+ ip address 10.0.171.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.162
+ description VPN 162
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 162
+ vrf forwarding 162
+ ip address 10.0.172.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.163
+ description VPN 163
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 163
+ vrf forwarding 163
+ ip address 10.0.173.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.164
+ description VPN 164
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 164
+ vrf forwarding 164
+ ip address 10.0.174.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.165
+ description VPN 165
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 165
+ vrf forwarding 165
+ ip address 10.0.175.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.166
+ description VPN 166
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 166
+ vrf forwarding 166
+ ip address 10.0.176.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.167
+ description VPN 167
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 167
+ vrf forwarding 167
+ ip address 10.0.177.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.168
+ description VPN 168
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 168
+ vrf forwarding 168
+ ip address 10.0.178.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.169
+ description VPN 169
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 169
+ vrf forwarding 169
+ ip address 10.0.179.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.170
+ description VPN 170
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 170
+ vrf forwarding 170
+ ip address 10.0.180.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.171
+ description VPN 171
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 171
+ vrf forwarding 171
+ ip address 10.0.181.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.172
+ description VPN 172
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 172
+ vrf forwarding 172
+ ip address 10.0.182.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.173
+ description VPN 173
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 173
+ vrf forwarding 173
+ ip address 10.0.183.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.174
+ description VPN 174
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 174
+ vrf forwarding 174
+ ip address 10.0.184.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.175
+ description VPN 175
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 175
+ vrf forwarding 175
+ ip address 10.0.185.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.176
+ description VPN 176
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 176
+ vrf forwarding 176
+ ip address 10.0.186.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.177
+ description VPN 177
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 177
+ vrf forwarding 177
+ ip address 10.0.187.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.178
+ description VPN 178
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 178
+ vrf forwarding 178
+ ip address 10.0.188.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.179
+ description VPN 179
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 179
+ vrf forwarding 179
+ ip address 10.0.189.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.180
+ description VPN 180
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 180
+ vrf forwarding 180
+ ip address 10.0.190.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.181
+ description VPN 181
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 181
+ vrf forwarding 181
+ ip address 10.0.191.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.182
+ description VPN 182
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 182
+ vrf forwarding 182
+ ip address 10.0.192.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.183
+ description VPN 183
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 183
+ vrf forwarding 183
+ ip address 10.0.193.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.184
+ description VPN 184
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 184
+ vrf forwarding 184
+ ip address 10.0.194.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.185
+ description VPN 185
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 185
+ vrf forwarding 185
+ ip address 10.0.195.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.186
+ description VPN 186
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 186
+ vrf forwarding 186
+ ip address 10.0.196.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.187
+ description VPN 187
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 187
+ vrf forwarding 187
+ ip address 10.0.197.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.188
+ description VPN 188
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 188
+ vrf forwarding 188
+ ip address 10.0.198.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.189
+ description VPN 189
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 189
+ vrf forwarding 189
+ ip address 10.0.199.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.190
+ description VPN 190
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 190
+ vrf forwarding 190
+ ip address 10.0.200.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.191
+ description VPN 191
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 191
+ vrf forwarding 191
+ ip address 10.0.201.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.192
+ description VPN 192
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 192
+ vrf forwarding 192
+ ip address 10.0.202.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.193
+ description VPN 193
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 193
+ vrf forwarding 193
+ ip address 10.0.203.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.194
+ description VPN 194
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 194
+ vrf forwarding 194
+ ip address 10.0.204.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.195
+ description VPN 195
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 195
+ vrf forwarding 195
+ ip address 10.0.205.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.196
+ description VPN 196
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 196
+ vrf forwarding 196
+ ip address 10.0.206.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.197
+ description VPN 197
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 197
+ vrf forwarding 197
+ ip address 10.0.207.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.198
+ description VPN 198
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 198
+ vrf forwarding 198
+ ip address 10.0.208.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet3.199
+ description VPN 199
+ no shutdown
+ arp timeout 1200
+ encapsulation dot1Q 199
+ vrf forwarding 199
+ ip address 10.0.209.1 255.255.255.0
+ no ip redirects
+ ip mtu    1496
+exit
+interface GigabitEthernet4
+ no shutdown
+exit
+interface Tunnel2
+ no shutdown
+ ip unnumbered GigabitEthernet2
+ no ip redirects
+ ipv6 unnumbered GigabitEthernet2
+ no ipv6 redirects
+ tunnel source GigabitEthernet2
+ tunnel mode sdwan
+exit
+control-plane
+!
+clock timezone UTC 0 0
+logging persistent size 104857600 filesize 10485760
+no logging monitor
+logging buffered 512000
+logging console
+aaa authentication login default local
+aaa authorization exec default local
+aaa server radius dynamic-author
+!
+snmp-server ifindex persist
+line aux 0
+ stopbits 1
+!
+line con 0
+ speed    9600
+ stopbits 1
+!
+line vty 0 4
+ transport input ssh
+!
+line vty 5 80
+ transport input ssh
+!
+lldp run
+nat64 translation timeout tcp 3600
+nat64 translation timeout udp 300
+sdwan
+ interface GigabitEthernet2
+  tunnel-interface
+   encapsulation ipsec weight 1
+   no border
+   color biz-internet restrict
+   no last-resort-circuit
+   no low-bandwidth-link
+   no vbond-as-stun-server
+   vmanage-connection-preference 5
+   port-hop
+   carrier                       default
+   nat-refresh-interval          5
+   hello-interval                1000
+   hello-tolerance               12
+   no allow-service all
+   no allow-service bgp
+   allow-service dhcp
+   allow-service dns
+   allow-service icmp
+   allow-service sshd
+   no allow-service netconf
+   no allow-service ntp
+   no allow-service ospf
+   no allow-service stun
+   allow-service https
+   no allow-service snmp
+   no allow-service bfd
+  exit
+ exit
+ interface GigabitEthernet3
+ exit
+ appqoe
+  no tcpopt enable
+  no dreopt enable
+  no httpopt enable
+ !
+ omp
+  no shutdown
+  send-path-limit  4
+  ecmp-limit       4
+  graceful-restart
+  no as-dot-notation
+  timers
+   holdtime               60
+   advertisement-interval 1
+   graceful-restart-timer 43200
+   eor-timer              300
+  exit
+  address-family ipv4
+   advertise bgp
+   advertise connected
+   advertise static
+  !
+  address-family ipv6
+   advertise bgp
+   advertise connected
+   advertise static
+  !
+ !
+!
+bfd color lte
+ hello-interval 1000
+ no pmtu-discovery
+ multiplier     1
+!
+bfd default-dscp 48
+bfd app-route multiplier 2
+bfd app-route poll-interval 123400
+security
+ ipsec
+  rekey          86400
+  replay-window  512
+  integrity-type ip-udp-esp esp
+ !
+!
+sslproxy
+ no enable
+ rsa-key-modulus      2048
+ certificate-lifetime 730
+ eckey-type           P256
+ ca-tp-label          PROXY-SIGNING-CA
+ settings expired-certificate  drop
+ settings untrusted-certificate drop
+ settings unknown-status       drop
+ settings certificate-revocation-check none
+ settings unsupported-protocol-versions drop
+ settings unsupported-cipher-suites drop
+ settings failure-mode         close
+ settings minimum-tls-ver      TLSv1
+ dual-side optimization enable
+!
