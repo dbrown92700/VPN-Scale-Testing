@@ -59,7 +59,7 @@ cliTemplate = cliTemplate\
     .replace('~~~vrf-name-servers~~~', vrf_name_servers.rstrip('\n'))\
     .replace('~~~subinterfaces~~~', subinterfaces.rstrip('\n'))
 
-with open(f'FIS_VPN{vpnStart}-{vpnEnd}.cfg', "w") as file:
+with open(f'output/FIS_VPN{vpnStart}-{vpnEnd}.cfg', "w") as file:
     file.write(cliTemplate)
 
 vmanage = rest_api_lib(vmanage_ip, vmanage_user, vmanage_password)
@@ -77,6 +77,6 @@ vmanage.logout()
 
 print(f'templateId: {templateId}')
 
-with open(f'addresslist{vpnStart}-{vpnEnd}.csv', 'w') as file:
+with open(f'output/addresslist{vpnStart}-{vpnEnd}.csv', 'w') as file:
     for vpn in range(vpnStart, vpnEnd+1):
         file.write(f'10.{int((vpn + 10) / 256)}.{(vpn + 10) % 256}.1,')
